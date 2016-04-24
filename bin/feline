@@ -9,8 +9,8 @@ def input_handler(arg)
       Feline::File.new.move
     when "fact"
       puts Feline::Fact.new.fact
-    when "foo"
-      puts "Do something else"
+    when "rspec"
+      puts `bundle exec rspec spec`
     else
       Feline::Browser.new.open
   end
