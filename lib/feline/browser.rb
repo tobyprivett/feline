@@ -1,7 +1,15 @@
 module Feline
   class Browser
     def initialize
-      puts "Open a browser window"
+      Object::File.open(filename, 'w') { |file| file.write(cat_html) }
+    end
+
+    def open
+      `open #{ filename }`
+    end
+
+    def filename
+      @filename ||= "tmp/cats-#{ Time.now.to_i }.html"
     end
 
     def cat_html
