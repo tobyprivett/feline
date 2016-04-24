@@ -4,11 +4,12 @@ require "feline"
 describe Feline::Browser do
 
   before do
-    allow_any_instance_of(Object::File).
-      to receive(:open).with(filename, 'w').and_return(true)
-
     allow_any_instance_of(described_class).
       to receive(:`).with("open #{ filename }").and_return("file opened")
+  end
+
+  after do
+    `rm #{ filename}`
   end
 
   subject { Feline::Browser.new }
