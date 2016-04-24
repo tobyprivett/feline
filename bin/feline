@@ -6,7 +6,7 @@ require "feline"
 def input_handler(arg)
   case arg
     when "file"
-      Feline::File.new
+      Feline::File.new.move
     when "fact"
       puts Feline::Fact.new.fact
     when "foo"
