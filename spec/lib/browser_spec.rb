@@ -7,4 +7,8 @@ describe Feline::Browser do
   it "initializes a Feline::Browser" do
     expect(subject).to be_a(Feline::Browser)
   end
+
+  it "generate the cat html" do
+    expect(subject.cat_html).to include(Feline::Cat::RANDOM_IMAGE)
+  end
 end
