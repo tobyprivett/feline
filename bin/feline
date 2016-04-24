@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "feline"
+
+def input_handler(arg)
+  case arg
+    when "file"
+      puts "Save a file"
+    when "fact"
+      puts "Print a fact"
+    when "foo"
+      puts "Do something else"
+    else
+      puts "Open a browser window"
+  end
+end
+
+input_handler(ARGV[0])
+exit
