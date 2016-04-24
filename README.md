@@ -1,36 +1,34 @@
 # Feline
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/feline`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a Ruby command line utility that interacts with a couple of Cat-related APIs
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
+You may need to install bundler:
 
-```ruby
-gem 'feline'
-```
+    $ gem install bundler
 
-And then execute:
+
+And then the dependencies:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install feline
 
 ## Usage
 
-TODO: Write usage instructions here
+  Open a web browser with a random cat image:
 
-## Development
+    $ ./bin/feline browser
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+  Print a random cat fact to the terminal:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+    $ ./bin/feline fact
 
-## Contributing
+  Save a random cat image to the desktop (on Mac OS):
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/feline.
+    $ ./bin/feline file
 
+  Run the test suite:
+
+    $ ./bin/feline rspec
