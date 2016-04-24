@@ -6,13 +6,13 @@ require "feline"
 def input_handler(arg)
   case arg
     when "file"
-      puts "Save a file"
+      Feline::File.new
     when "fact"
-      puts "Print a fact"
+      Feline::Fact.new
     when "foo"
       puts "Do something else"
     else
-      puts "Open a browser window"
+      puts Feline::Browser.new
   end
 end
 
